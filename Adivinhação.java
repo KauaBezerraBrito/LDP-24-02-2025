@@ -13,7 +13,7 @@ public class Adivinhação {
 		
 		do {
 		
-			System.out.print("Digite um número inteiro entre 0 e 100: ");
+			System.out.print("Digite um número inteiro entre 1 e 100: ");
 			número = sc.nextInt();
 		
 			if (número >= 1 && número <= 100) { 
@@ -35,7 +35,7 @@ public class Adivinhação {
 				}
 				
 			} else {
-				System.out.println("Número inválido. ");
+				System.out.print("Número inválido. \n\n");
 				
 			}
 			
