@@ -1,4 +1,4 @@
-package Desafios;
+package sla;
 
 import java.util.Scanner;
 
@@ -9,27 +9,40 @@ public class Adivinhação {
 		Scanner sc = new Scanner(System.in);
 		
 		int n_aleatório = (int) (Math.random() * 100) + 1;
+		int número;
 		
-		System.out.print("Digite um número inteiro entre 0 e 100: ");
-		int número = sc.nextInt();
+		do {
 		
-		if (número != n_aleatório) {
+			System.out.print("Digite um número inteiro entre 0 e 100: ");
+			número = sc.nextInt();
+		
+			if (número >= 0 && número <= 100) { 
+				
+				if (número != n_aleatório) {
 			
-			if (número > n_aleatório) {
-				System.out.println("O número digitado é maior que o número gerado pela máquina.");
-				System.out.println("O número era " + n_aleatório + ".");
+					if (número > n_aleatório) {
+						System.out.println("O número digitado é maior que o número gerado pela máquina. \n");
+				
+					} else {
+						System.out.println("O número digitado é menor que o número gerado pela máquina. \n");
+				
+					}
+				
+				} else {
+					System.out.print("\nVocê acertou!");
+					System.out.print(" O número era " + n_aleatório + ".");
+			
+				}
 				
 			} else {
-				System.out.println("O número digitado é menor que o número gerado pela máquina.");
-				System.out.println("O número era " + n_aleatório + ".");
+				System.out.println("Número inválido. ");
 				
 			}
 			
-		} else {
-			System.out.println("Você adivinhou o número!");
-			
-		} sc.close();
+		} while (número != n_aleatório);
 	
+		sc.close();
+
 	}
 
 }
