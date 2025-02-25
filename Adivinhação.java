@@ -16,7 +16,7 @@ public class Adivinhação {
 			System.out.print("Digite um número inteiro entre 0 e 100: ");
 			número = sc.nextInt();
 		
-			if (número >= 0 && número <= 100) { 
+			if (número >= 1 && número <= 100) { 
 				
 				if (número != n_aleatório) {
 			
